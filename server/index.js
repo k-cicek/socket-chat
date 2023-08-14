@@ -22,7 +22,7 @@ io.on("connection", (socket) => {
     socket.join(data);
   });
 
-  socket.on("message", (data) => {
+  socket.on("messages", (data) => {
     socket.to(data.room).emit("messageReturn", data);
   });
 });
